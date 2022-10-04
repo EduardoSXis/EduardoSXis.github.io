@@ -1,0 +1,155 @@
+html{
+    background: linear-gradient(120deg, black, #585858);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #dcdcdc;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.imagemmusica img {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 1em 5px rgba(0, 0, 0, 0.567);
+}
+
+.descricao{
+    width: 300px;
+    
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.314);
+}
+
+h2{
+    margin-bottom: 2px;
+}
+
+.duracao{
+    width: 300px;
+    margin-top: 25px;
+}
+
+.barra{
+    width: 300px;
+    height: 6px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+progress{
+    height: 6px;
+    width: 0%;
+}
+
+.ponto{
+    width: 15px;
+    height: 15px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.tempo{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.player{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.botao-play, .botao-pause{
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.setas{
+    font-size: 33px;
+    cursor: pointer;
+}
+
+.botao-pause{
+    display: none;
+}
+
+.imagemtotoro img{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    right: 135px;
+    bottom: 10px;
+}
+
+.cloud{
+    opacity: 40%;
+    position: relative;
+    left: 500px;
+    bottom: 0px;
+    width: 300px;
+    height: 70px;
+    background: white;
+    border-radius: 100px;
+}
+
+.cloud::before{
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 40px;
+    width: 110px;
+    height: 110px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 90px 0 0 30px white;
+}
+
+.rain{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.rain span{
+    opacity: 25%;
+    position: relative;
+    left: 500px;
+    bottom: 10px;
+    width: 2px;
+    height: 10px;
+    background: white;
+    margin: 0 2px;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    animation-duration: calc(15s / var(--i));
+    transform-origin: bottom;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: translateY(0) scale(1);
+    }
+    70%
+    {
+        transform: translateY(300px) scale(1);
+    }
+    100%
+    {
+        transform: translateY(300px) scale(0);
+    }
+}
